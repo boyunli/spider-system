@@ -4,6 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>爬虫系统</title>
+<!-- jQuery file -->
+<script src="{{static_url("js/jquery.min.js")}}"></script>
 <script src="{{static_url("js/script.js")}}" type="text/javascript" ></script>
 <link rel="stylesheet" type="text/css" href="{{ static_url("css/style.css")}}"/>
 <link href='http://fonts.googleapis.com/css?family=Belgrano' rel='stylesheet' type='text/css'>
@@ -17,7 +19,7 @@
 
      
     <div class="loginform">
-        <form method="POST">
+        <form action='/index'>
             <div class="loginform_row">
             <label>Username:</label>
             <input type="text" class="loginform_input" id="username" name="" />
@@ -32,6 +34,7 @@
             <div class="clear"></div>
         </form>
     </div>
+
  
 
 </div>

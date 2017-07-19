@@ -4,9 +4,12 @@
 the url structure of website
 """
 
-from handlers.index import LoginHandler    #假设已经有了
+from handlers.index import IndexHandler
+from handlers.login import LoginHandler
 
 
 url = [
     (r'/login/?', LoginHandler),
+    (r'/index/?', IndexHandler),
+    (r'/index/crawler/?', IndexHandler.start_crawl()),
 ]

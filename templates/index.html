@@ -61,16 +61,49 @@ $(".trigger").click(function(){
     
         
     <ul id="tabsmenu" class="tabsmenu">
-        <li class="active"><a href="#tab1">爬取条件自定义</a></li>
-        <li><a href="#tab2">爬取说明</a></li>
-        <!--<li><a href="#tab3">Tab three</a></li>
-        <li><a href="#tab4">Tab four</a></li>-->
+        <li class="active"><a href="#tab1">请填写爬取条件</a></li>
+        <li><a href="#tab2">请填写爬取需求</a></li>
+        <li><a href="#tab3">爬取说明</a></li>
+        <!-- <li><a href="#tab4">Tab four</a></li>-->
     </ul>
 
     <div id="tab1" class="tabcontent">
         <h3>请填写爬取条件</h3>
+        <form action=''>
+            <div class="form">
+                <div class="form_row">
+                <label>网站名:</label>
+                <select class="form_select" id="crawl_website" name="">
+                    {% for site in sites %}
+                    <option>{{site}}</option>
+                    {% end %}
+                </select>
+                </div>
+                 
+                <div class="form_row">
+                <label>关键词:</label>
+                <input type="text" class="form_input" id="crawl_keyword" name="" />
+                </div>
+               
+                <!--
+                <div class="form_row">
+                <label>爬取时长:</label>
+                <select class="form_select" name="">
+                <option>Select one</option>
+                <option>Select two</option>
+                </select>
+                </div>-->
+                
+                <div class="form_row">
+                <input type="submit" class="form_submit" id="crawl_submit" value="开始爬取" />
+                </div> 
+                <div class="clear"></div>
+            </div>
+        </form>
+    </div>
+    <div id="tab2" class="tabcontent">
+        <h3>请填写爬取需求</h3>
         <div class="form">
-            
             <div class="form_row">
             <label>网站名:</label>
             <input type="text" class="form_input" name="" />
@@ -82,23 +115,16 @@ $(".trigger").click(function(){
             </div>
             
             <div class="form_row">
-            <label>爬取时长:</label>
-            <select class="form_select" name="">
-            <option>Select one</option>
-            </select>
-            </div>
-            
-             <!--<div class="form_row">
-            <label>Message:</label>
+            <label>需求补充:</label>
             <textarea class="form_textarea" name=""></textarea>
-            </div>-->
+            </div>
             <div class="form_row">
             <input type="submit" class="form_submit" value="Submit" />
             </div> 
             <div class="clear"></div>
         </div>
     </div>
-    <div id="tab2" class="tabcontent">
+    <div id="tab3" class="tabcontent">
         <h3>Tab two title</h3>
         <ul class="lists">
         <li>Consectetur adipisicing elit  error sit voluptatem accusantium doloremqu sed</li>
